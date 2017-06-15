@@ -23,7 +23,7 @@ public abstract class Main {
     public static void main(final String[] args) {
     	
     	
-    	System.out.println("salut");
+    	System.out.println("salut Corentin");
         final ControllerFacade controller = new ControllerFacade(new ViewFacade(), new ModelFacade());
 
         try {
