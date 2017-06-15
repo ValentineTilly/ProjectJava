@@ -21,6 +21,9 @@ public abstract class Main {
      *            the arguments
      */
     public static void main(final String[] args) {
+    	
+    	
+    	System.out.println("salut");
         final ControllerFacade controller = new ControllerFacade(new ViewFacade(), new ModelFacade());
 
         try {
@@ -30,4 +33,11 @@ public abstract class Main {
         }
     }
 
+    
+    
+    // salut valentine 
+    
+    
+    
+    
 }
