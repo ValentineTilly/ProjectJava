@@ -1,5 +1,7 @@
 package view;
 
+import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.Image;
 
 import javax.swing.ImageIcon;
@@ -36,13 +38,20 @@ public class Scene  extends JPanel{
 	
 	
 	
-	
-		
-	
-	
 	}
 	
 		
+	public void paintComponent(Graphics g) {
+		super.paintComponent(g);
+
+		Graphics g2 = (Graphics2D) g;
+
+		
+	
+		g2.drawImage(imgperso, 300, 245, null);
+
+	
+	}
 	
 	
 	
