@@ -2,6 +2,11 @@ package controller;
 
 import java.sql.SQLException;
 
+
+import view.Scene;
+import view.Fenetre;
+
+
 import model.IModel;
 import view.IView;
 
@@ -12,7 +17,9 @@ import view.IView;
  * @version 1.0
  */
 public class ControllerFacade implements IController {
-
+   
+	
+	public static Scene scene;
     /** The view. */
     private final IView  view;
 
@@ -40,6 +47,16 @@ public class ControllerFacade implements IController {
      *             the SQL exception
      */
     public void start() {
+    	
+    	
+    	Fenetre fenetre = new Fenetre("BoulderDash");
+    
+    	scene = new Scene();
+		fenetre.setContentPane(scene);
+	
+		fenetre.setVisible(true);
+    	
+    
         
     }
 
