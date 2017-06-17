@@ -34,6 +34,8 @@ public class ControllerFacade implements IController {
      * @param model
      *            the model
      */
+    
+    
     public ControllerFacade(final IView view, final IModel model) {
         super();
         this.view = view;
@@ -51,8 +53,8 @@ public class ControllerFacade implements IController {
     	
     	Fenetre fenetre = new Fenetre("BoulderDash");
     
-    	scene = new Scene();
-		fenetre.setContentPane(scene);
+    	//scene = new Scene();
+		//fenetre.setContentPane(scene);
 	
 		fenetre.setVisible(true);
     	
