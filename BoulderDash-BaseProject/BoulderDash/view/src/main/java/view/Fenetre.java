@@ -11,8 +11,12 @@ public class Fenetre extends JFrame  {
 
 	Scene panneau = new Scene(); 
 	KeyEven keyEven = new KeyEven(); 
+	Demojbc demo = new Demojbc();
 	public static int fenWidth = 700; 
 	public static int fenHeight = 400; 
+	
+	
+	
 	
 	
 
