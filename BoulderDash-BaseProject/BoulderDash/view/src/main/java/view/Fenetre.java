@@ -10,11 +10,16 @@ import javax.swing.JPanel;
 public class Fenetre extends JFrame  {
 
 	Scene panneau = new Scene(); 
+	KeyEven keyEven = new KeyEven(); 
+	public static int fenWidth = 700; 
+	public static int fenHeight = 400; 
 	
+	
+
 	public Fenetre (String valeur)
 	{
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		this.setSize(700, 400);
+		this.setSize(fenWidth, fenHeight);
 
 		this.setLocationRelativeTo(null);
 		this.setResizable(false);
@@ -22,11 +27,10 @@ public class Fenetre extends JFrame  {
         this.setTitle(valeur);
 		
 
-        this.addKeyListener((KeyListener)panneau);
+        this.addKeyListener((KeyListener)keyEven);
 
     	this.setContentPane(panneau);
 	}
-	
 	
 	
 	

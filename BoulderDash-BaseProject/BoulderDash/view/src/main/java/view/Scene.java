@@ -1,6 +1,5 @@
 package view;
 
-import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.event.KeyEvent;
@@ -9,7 +8,7 @@ import java.awt.event.KeyListener;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
-public class Scene  extends JPanel implements KeyListener{
+public class Scene  extends JPanel{
 	
 	/**
 	 * 
@@ -20,10 +19,10 @@ public class Scene  extends JPanel implements KeyListener{
 	private Image  imgperso;
 	// imgperso récupérera perso 
 	
+	private static int  persox = 200; 
+	private static int persoy = 200; 
 	
-	private int persox = 200; 
-	private int persoy = 200; 
-	
+
 	private int mapx;
 	private int mapy; 
 	
@@ -32,6 +31,8 @@ public class Scene  extends JPanel implements KeyListener{
 		super();
 		perso = new ImageIcon(getClass().getResource("/name/go.PNG"));
 		this.imgperso = this.perso.getImage();
+
+
 	}
 	
 		
@@ -39,53 +40,39 @@ public class Scene  extends JPanel implements KeyListener{
 		super.paintComponent(g);
 		g.clearRect(0, 0, getWidth(), getHeight());
 		g.drawImage(imgperso, persox, persoy, null);
+		repaint();
+	}
+	
+	
+	
+	
+	bool Collision (AABB box1, AABB box2) {
+		
+	}
+	
+	
+	
+	
+
+	public static int getPersox() {
+		return persox;
 	}
 
+
+	public static void setPersox(int persox) {
+		Scene.persox = persox;
+	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	public void keyPressed(KeyEvent e) {
-		// TODO Auto-generated method stub
-		if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
-			persox = persox+3;
-		}
-		
-		if (e.getKeyCode() == KeyEvent.VK_DOWN) {
-			persoy = persoy+3; 
-		}
-		
-		if (e.getKeyCode() == KeyEvent.VK_LEFT) {
-			persox = persox-3; 
-		} 
-		
-		if (e.getKeyCode() == KeyEvent.VK_UP) {
-			persoy = persoy-3;
-		}
-		 
-		repaint(); 
-		
+
+	public static int getPersoy() {
+		return persoy;
 	}
 
-	@Override
-	public void keyReleased(KeyEvent e) {
-		// TODO Auto-generated method stub==
-		
+
+	public static void setPersoy(int persoy) {
+		Scene.persoy = persoy;
 	}
 
-	@Override
-	public void keyTyped(KeyEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-	
-	
-	
 	
 }
 	
