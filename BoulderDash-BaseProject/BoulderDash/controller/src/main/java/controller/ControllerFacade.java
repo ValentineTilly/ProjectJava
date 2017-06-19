@@ -3,7 +3,7 @@ package controller;
 import java.sql.SQLException;
 
 
-import view.Scene;
+
 import view.Fenetre;
 
 
@@ -19,7 +19,7 @@ import view.IView;
 public class ControllerFacade implements IController {
    
 	
-	public static Scene scene;
+	
     /** The view. */
     private final IView  view;
 
