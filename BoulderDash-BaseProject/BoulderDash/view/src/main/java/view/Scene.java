@@ -45,11 +45,7 @@ public class Scene  extends JPanel{
 	
 	
 	
-	
-	bool Collision (AABB box1, AABB box2) {
-		
-	}
-	
+
 	
 	
 	
