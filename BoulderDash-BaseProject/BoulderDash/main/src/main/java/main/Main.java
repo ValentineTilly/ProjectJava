@@ -1,9 +1,11 @@
 package main;
 
-import java.sql.SQLException;
-
 import controller.ControllerFacade;
+import controller.IController;
+import model.IModel;
 import model.ModelFacade;
+import model.dao.Demojbc;
+import view.IView;
 import view.ViewFacade;
 
 /**
@@ -22,11 +24,18 @@ public abstract class Main {
      */
     public static void main(final String[] args) {
     	
-    	
-        final ControllerFacade controller = new ControllerFacade(new ViewFacade(), new ModelFacade());
-
-        controller.start();
+	
+		
+		IModel model = new ModelFacade();
+		IView view = new ViewFacade(model); 
+		IController controller = new ControllerFacade(view, model);
+       
         
+        view.start();
+        
+      
+        
+       
     }
 
     

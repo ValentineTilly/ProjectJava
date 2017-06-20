@@ -1,17 +1,29 @@
 package view;
 
-import java.awt.Image;
 import java.awt.event.KeyListener;
 
 import javax.swing.JFrame;
-import javax.swing.JPanel;
+
+import model.IModel;
+
+
+
+
 
 @SuppressWarnings("serial")
 public class Fenetre extends JFrame  {
 
-	Scene panneau = new Scene(); 
+
+	Scene panneau;
+	IModel model;
+	
+
+	
 	KeyEven keyEven = new KeyEven(); 
-	Demojbc demo = new Demojbc();
+	
+
+	
+	
 	public static int fenWidth = 700; 
 	public static int fenHeight = 400; 
 	
@@ -20,7 +32,7 @@ public class Fenetre extends JFrame  {
 	
 	
 
-	public Fenetre (String valeur)
+	public Fenetre (String valeur, IModel model)
 	{
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setSize(fenWidth, fenHeight);
@@ -32,7 +44,8 @@ public class Fenetre extends JFrame  {
 		
 
         this.addKeyListener((KeyListener)keyEven);
-
+        
+        this.panneau = new Scene(this.model);
     	this.setContentPane(panneau);
 	}
 	

@@ -1,17 +1,30 @@
 package model.dao;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
-import java.sql.SQLException;
-import java.sql.Statement;
+
+
+import java.awt.Image;
+
+import java.sql.*;
+import java.util.ArrayList;
+
+import javax.swing.ImageIcon;
+
+import model.Map;
+import model.Objets;
 
 
 
 public class Demojbc {
 
 
+	
+	 public static int j;
+	
+	private  ImageIcon icopierre ;
+	
+	private   Image imgPierre;
+
+	
 
 	/*
 	 * public static void sauverEnBase(String personne) {
@@ -42,7 +55,17 @@ public class Demojbc {
 	 * e.printStackTrace(); } }
 	 * 
 	 * }
+	 * 
+	 *
+	 *
 	 */
+	 
+	
+
+	
+	
+	
+	
 	public static void LireEnBase() {
 
 		String url = "jdbc:mysql://localhost/formation";
@@ -71,23 +94,33 @@ public class Demojbc {
 			 * 
 			 * System.out.println("\n");
 			 */
-
+			    j = 1;
 			while (rs.next()) {
-
+                    
 				for (int i = 1; i <= resultMeta.getColumnCount(); i++) {
-					//
 					
-					if (rs.getInt(i) == 1) {
-						System.out.print("p");
-					} else {
-						System.out.print(rs.getInt(i));
-					}
+					
+			
+					
+					
+					
+					
+					
+				Map.obj(i,j,rs.getInt(i));
+					
+					
 					
 				}
-
+				j++;
 				System.out.println("\n");
 
 			}
+			
+	
+			
+			
+			
+			
 
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -107,5 +140,28 @@ public class Demojbc {
 
 	}
 
-}
+
+
+
+	}
+
+
+
+
+	
+		
+		/*if else ( lo == 0)
+		{
+			Sole sol = new Sole();
+		}*/
+		
+	
+	
+	
+
+
+
+
+
+
 

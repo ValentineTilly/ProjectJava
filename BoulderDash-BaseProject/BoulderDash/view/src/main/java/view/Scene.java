@@ -3,9 +3,11 @@ package view;
 import java.awt.Graphics;
 import java.awt.Image;
 
-
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
+
+import model.IModel;
+
 
 public class Scene  extends JPanel{
 	
@@ -14,9 +16,14 @@ public class Scene  extends JPanel{
 	 */
 	private static final long serialVersionUID = -4866890461340317485L;
 	private ImageIcon perso; 
-	// on récupère l'image du perso 
+	
 	private Image  imgperso;
-	// imgperso récupérera perso 
+
+	IModel model;
+	
+	private ImageIcon  pierre;
+	
+	private Image imgpierre;
 	
 	private static int  persox = 200; 
 	private static int persoy = 200; 
@@ -26,21 +33,44 @@ public class Scene  extends JPanel{
 	private int mapy; 
 	
 
-	public Scene() {
+	public Scene(IModel model) {
 		super();
-		perso = new ImageIcon(getClass().getResource("/name/go.PNG"));
+		perso = new ImageIcon(getClass().getResource("/name/74336.PNG"));
 		this.imgperso = this.perso.getImage();
-
-
+	
+		this.model = model;
+		 
+		
+		
 	}
 	
 		
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		g.clearRect(0, 0, getWidth(), getHeight());
-		g.drawImage(imgperso, persox, persoy, null);
+		
+		
+		repaint();
+		
+		//sw and sh are the width and height of sprite 
+		//px and py are the position of your sprite in screen
+		//i and j are the coordinates of the sprite  in the sheet that you want to paint
+		
+		int i =0;
+		int j = 0;
+		g.drawImage(imgperso, persox,persoy, persox+16, persoy+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
+		
+		
+		
+		
 		repaint();
 	}
+		
+		//Demojbc.ellement
+		
+		
+		
+	
 	
 	
 	
