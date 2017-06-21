@@ -36,12 +36,12 @@ public class Scene extends JPanel {
 	private int mapx;
 	private int mapy;
 
+
 	public Scene(IModel model) {
 		super();
 		perso = new ImageIcon(getClass().getResource("/name/image.png"));
 		this.imgperso = this.perso.getImage();
 
-		this.model = model;
 
 	}
 
@@ -78,7 +78,9 @@ public class Scene extends JPanel {
 			e.printStackTrace();
 		}
 		
-		//g.drawString("Time : " + seconde, 600, 50); 
+		g.drawString("Time : " + (60 - Fenetre.seconde), 600, 30);
+		
+
 		
 		repaint();
 	}

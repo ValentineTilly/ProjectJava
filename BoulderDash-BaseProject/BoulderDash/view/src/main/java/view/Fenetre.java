@@ -29,9 +29,9 @@ public class Fenetre extends JFrame  {
 	public static int fenHeight = 400; 
 	
 	
-	private int seconde; 
+	public static int seconde; 
 	
-	
+
 
 	public Fenetre (String valeur, IModel model)
 	{
@@ -63,24 +63,35 @@ public class Fenetre extends JFrame  {
 
 	
 	
-	public void timer () {
-		   while (this.seconde < 60) {
+	public void timer() {
+		   while (this.getSeconde() < 60) {
 				   try { 
 					Thread.sleep(1000);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				} 
-			  this.seconde ++; 
-			  System.out.println(this.seconde);
-			  //return seconde; 
+			  this.setSeconde(getSeconde() + 1); 
+			  System.out.println(this.getSeconde());
+	
 		   }
+				this.dispose(); 
+	}
 
-			this.dispose(); 
+
+
+
+	public int getSeconde() {
+		return seconde;
+	}
+
+
+	public void setSeconde(int seconde) {
+		this.seconde = seconde;
 	}
 	
 	
-	
+
 	
 }
 	
