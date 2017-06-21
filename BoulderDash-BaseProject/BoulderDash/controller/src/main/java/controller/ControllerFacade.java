@@ -56,8 +56,8 @@ public class ControllerFacade implements IController {
     	//scene = new Scene();
 		//fenetre.setContentPane(scene);
 	
-		fenetre.setVisible(true);
-
+    	fenetre.setVisible(true);
+    	fenetre.timer(); 
         
     }
 

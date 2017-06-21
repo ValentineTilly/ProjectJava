@@ -63,7 +63,7 @@ public class Fenetre extends JFrame  {
 
 	
 	
-	public int timer () {
+	public void timer () {
 		   while (this.seconde < 60) {
 				   try { 
 					Thread.sleep(1000);
@@ -73,7 +73,7 @@ public class Fenetre extends JFrame  {
 				} 
 			  this.seconde ++; 
 			  System.out.println(this.seconde);
-			  return seconde; 
+			  //return seconde; 
 		   }
 
 			this.dispose(); 
