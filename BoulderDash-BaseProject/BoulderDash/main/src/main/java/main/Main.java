@@ -4,6 +4,8 @@ import java.sql.SQLException;
 
 import controller.ControllerFacade;
 import model.ModelFacade;
+import model.dao.AbstractDAO;
+import model.dao.CompteurDiamant;
 import view.ViewFacade;
 
 /**
@@ -21,11 +23,17 @@ public abstract class Main {
      *            the arguments
      */
     public static void main(final String[] args) {
-    	
+    	try {
+			CompteurDiamant.getNbrDiamants ();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
     	
         final ControllerFacade controller = new ControllerFacade(new ViewFacade(), new ModelFacade());
 
         controller.start();
+        
         
     }
 

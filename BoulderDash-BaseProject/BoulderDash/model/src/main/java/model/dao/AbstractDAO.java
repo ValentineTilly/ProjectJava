@@ -2,6 +2,7 @@ package model.dao;
 
 import java.sql.CallableStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 
 /**
  * <h1>The Class AbstractDAO.</h1>
@@ -18,6 +19,8 @@ public abstract class AbstractDAO {
      *            the query
      * @return the result set
      */
+
+	
     protected static ResultSet executeQuery(final String query) {
         return BoulderDashBDDConnector.getInstance().executeQuery(query);
     }
@@ -41,6 +44,9 @@ public abstract class AbstractDAO {
      * @return the callable statement
      */
     protected static CallableStatement prepareCall(final String query) {
-        return BoulderDashBDDConnector.getInstance().prepareCall(query);
+    	return BoulderDashBDDConnector.getInstance().prepareCall(query);    
     }
+    
+
+    
 }
