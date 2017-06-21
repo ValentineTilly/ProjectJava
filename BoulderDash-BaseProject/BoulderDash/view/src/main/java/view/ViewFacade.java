@@ -30,7 +30,8 @@ public class ViewFacade implements IView {
 	//scene = new Scene();
 	//fenetre.setContentPane(scene);
 
-	fenetre.setVisible(true);
+	fenetre.setVisible(true); 
+	fenetre.timer(); 
 
 	}
 }

@@ -45,7 +45,7 @@ public class Scene extends JPanel {
 
 	}
 
-	public void paintComponent(Graphics g) {
+	public void paintComponent(Graphics g, int seconde) {
 		super.paintComponent(g);
 		g.clearRect(0, 0, getWidth(), getHeight());
 
@@ -77,6 +77,9 @@ public class Scene extends JPanel {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+		
+		g.drawString("Time : " + seconde, 600, 50); 
+		
 		repaint();
 	}
 

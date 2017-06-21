@@ -5,6 +5,7 @@ import controller.IController;
 import model.IModel;
 import model.ModelFacade;
 import model.dao.Demojbc;
+import view.Fenetre;
 import view.IView;
 import view.ViewFacade;
 
@@ -32,8 +33,8 @@ public abstract class Main {
        
         
         view.start();
-        
-      
+ 
+     
         
        
     }
