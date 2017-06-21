@@ -2,7 +2,9 @@ package model;
 
 import java.awt.Image;
 
-public abstract class Objets  {
+
+
+public abstract class Objets {
 
 	
 protected float xo ; 

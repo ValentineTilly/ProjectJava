@@ -15,7 +15,7 @@ public class Cailloux extends Objets
 	
 	
 	
-public Cailloux(int x, int y ) 
+public Cailloux(int x, int y, int lo ) 
 {
 	
 

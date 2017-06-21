@@ -15,20 +15,16 @@ public class Diamants extends Objets {
 	
 	
 	
-	public Diamants(int x, int y ) 
+	public Diamants(int x, int y, int lo ) 
 	{
 		
-		
-		icoDiamants = new ImageIcon(getClass().getResource("/image/pierre.jpg"));
-		this.imgDiamants = this.icoDiamants.getImage();
-		
-		
-		
+
+	}
+	
+
 		
 	}
 	
 	
 	
-	
-	
-}
+

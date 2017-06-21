@@ -2,11 +2,14 @@ package view;
 
 import java.awt.Graphics;
 import java.awt.Image;
+import java.util.ArrayList;
 
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
 import model.IModel;
+import model.Map;
+import model.Objets;
 
 
 public class Scene  extends JPanel{
@@ -35,11 +38,12 @@ public class Scene  extends JPanel{
 
 	public Scene(IModel model) {
 		super();
-		perso = new ImageIcon(getClass().getResource("/name/74336.PNG"));
+		perso = new ImageIcon(getClass().getResource("/name/sprite.png"));
 		this.imgperso = this.perso.getImage();
 	
 		this.model = model;
 		 
+	
 		
 		
 	}
@@ -49,8 +53,10 @@ public class Scene  extends JPanel{
 		super.paintComponent(g);
 		g.clearRect(0, 0, getWidth(), getHeight());
 		
+		 
 		
-		repaint();
+		/*ArrayList <Objets> obj = new ArrayList<Objets>();
+		obj = Map.obj*/
 		
 		//sw and sh are the width and height of sprite 
 		//px and py are the position of your sprite in screen
@@ -58,7 +64,15 @@ public class Scene  extends JPanel{
 		
 		int i =0;
 		int j = 0;
-		g.drawImage(imgperso, persox,persoy, persox+16, persoy+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
+		g.drawImage(imgperso, persox,persoy, persox+60, persoy+60, i*40, j*40, (i+1)*40, (j+1)*40, null);
+		
+		for (int j2 = 0; j2 < 16; j2++) {
+			for (int k = 0; k < 16; k++) {
+				if (Map.map2[j2][k] == 1) {
+					g.drawImage(imgperso, j2*16,k*16, j2*16+60, k*16+60, i*40, j*40, (i+1)*40, (j+1)*40, null);
+				}
+			}
+		}
 		
 		
 		
