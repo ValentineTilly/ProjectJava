@@ -28,8 +28,8 @@ public class Scene  extends JPanel{
 	
 	private Image imgpierre;
 	
-	private static int  persox = 200; 
-	private static int persoy = 200; 
+	private static int  persox = 224; 
+	private static int persoy = 224; 
 	
 
 	private int mapx;
@@ -64,17 +64,42 @@ public class Scene  extends JPanel{
 		
 		int i =0;
 		int j = 0;
-		g.drawImage(imgperso, persox,persoy, persox+16, persoy+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
 		
 		for (int j2 = 0; j2 < 16; j2++) {
-			for (int k = 0; k < 16; k++) {
-				if (Map.map2[j2][k] == 1) {
+			for (int k = 0; k < 16; k++)
+			{
+				j= 0 ;
+				if (Map.map2[j2][k] == 0) {
+					 i =0;
+					
 					g.drawImage(imgperso, j2*16,k*16, j2*16+16, k*16+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
 				}
 				
-			
+				else if (Map.map2[j2][k] == 1)
+				{ i= 1;
+				j = 0 ;
+					g.drawImage(imgperso, j2*16,k*16, j2*16+16, k*16+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
+				}
 				
-				
+				else if (Map.map2[j2][k] == 2)
+				{ 
+					
+				 i=3 ;
+					g.drawImage(imgperso, j2*16,k*16, j2*16+16, k*16+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
+				}
+				else if (Map.map2[j2][k] == 3)
+				{ 
+				 i=4 ;
+					g.drawImage(imgperso, j2*16,k*16, j2*16+16, k*16+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
+				}
+				else if (Map.map2[j2][k] == 2)
+				{ 
+				 j=1 ;
+					g.drawImage(imgperso, j2*16,k*16, j2*16+16, k*16+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
+				}
+				j= 5;
+				g.drawImage(imgperso, persox,persoy, persox+16, persoy+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
+		
 			}
 		}
 		
