@@ -22,6 +22,7 @@ public class ViewFacade implements IView {
 	
 	public ViewFacade(IModel model) {
 		this.model = model;
+		//lu
 	}
 	
 	public void start() {
@@ -33,4 +34,6 @@ public class ViewFacade implements IView {
 	fenetre.setVisible(true);
 
 	}
+	
+	
 }
