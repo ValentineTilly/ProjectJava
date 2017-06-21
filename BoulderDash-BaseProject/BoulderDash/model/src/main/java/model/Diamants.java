@@ -8,9 +8,7 @@ import javax.swing.ImageIcon;
 public class Diamants extends Objets {
 
 	
-	private ImageIcon icoDiamants;
 
-	private Image imgDiamants;
 	
 	
 	

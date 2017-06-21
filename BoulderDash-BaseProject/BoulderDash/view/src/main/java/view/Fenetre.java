@@ -25,7 +25,7 @@ public class Fenetre extends JFrame  {
 	
 	
 	public static int fenWidth = 700; 
-	public static int fenHeight = 400; 
+	public static int fenHeight = 700; 
 	
 	
 	

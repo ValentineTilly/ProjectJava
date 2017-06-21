@@ -65,8 +65,8 @@ public class Scene  extends JPanel{
 		int i =0;
 		int j = 0;
 		
-		for (int j2 = 0; j2 < 16; j2++) {
-			for (int k = 0; k < 16; k++)
+		for (int j2 = 0; j2 < 31; j2++) {
+			for (int k = 0; k < 31; k++)
 			{
 				j= 0 ;
 				if (Map.map2[j2][k] == 0) {
@@ -92,9 +92,14 @@ public class Scene  extends JPanel{
 				 i=4 ;
 					g.drawImage(imgperso, j2*16,k*16, j2*16+16, k*16+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
 				}
-				else if (Map.map2[j2][k] == 2)
+				else if (Map.map2[j2][k] == 4)
 				{ 
 				 j=1 ;
+					g.drawImage(imgperso, j2*16,k*16, j2*16+16, k*16+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
+				}
+				else if (Map.map2[j2][k] == 5)
+				{ 
+				 j=3 ;
 					g.drawImage(imgperso, j2*16,k*16, j2*16+16, k*16+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
 				}
 				j= 5;
