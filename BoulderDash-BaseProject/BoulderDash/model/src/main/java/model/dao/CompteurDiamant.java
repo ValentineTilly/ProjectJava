@@ -1,4 +1,4 @@
-/*package model.dao;
+package model.dao;
 
 import java.sql.CallableStatement;
 import java.sql.ResultSet;
@@ -27,7 +27,6 @@ public class CompteurDiamant extends AbstractDAO {
             }
                result.close();
         }
-        System.out.println("Diamants" + nombreDiamant);
      	return nombreDiamant;
     }
-}*/
+}
