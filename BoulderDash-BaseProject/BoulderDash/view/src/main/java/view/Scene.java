@@ -38,7 +38,7 @@ public class Scene  extends JPanel{
 
 	public Scene(IModel model) {
 		super();
-		perso = new ImageIcon(getClass().getResource("/name/sprite.png"));
+		perso = new ImageIcon(getClass().getResource("/name/image.png"));
 		this.imgperso = this.perso.getImage();
 	
 		this.model = model;
@@ -64,13 +64,17 @@ public class Scene  extends JPanel{
 		
 		int i =0;
 		int j = 0;
-		g.drawImage(imgperso, persox,persoy, persox+60, persoy+60, i*40, j*40, (i+1)*40, (j+1)*40, null);
+		g.drawImage(imgperso, persox,persoy, persox+16, persoy+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
 		
 		for (int j2 = 0; j2 < 16; j2++) {
 			for (int k = 0; k < 16; k++) {
 				if (Map.map2[j2][k] == 1) {
-					g.drawImage(imgperso, j2*16,k*16, j2*16+60, k*16+60, i*40, j*40, (i+1)*40, (j+1)*40, null);
+					g.drawImage(imgperso, j2*16,k*16, j2*16+16, k*16+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
 				}
+				
+			
+				
+				
 			}
 		}
 		
