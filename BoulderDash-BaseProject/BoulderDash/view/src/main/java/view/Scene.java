@@ -6,7 +6,7 @@ import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
-import model.dao;
+//import model.dao;
 
 public class Scene  extends JPanel{
 	
@@ -47,7 +47,8 @@ public class Scene  extends JPanel{
 		g.drawImage(imgperso, persox, persoy, null);
 		g.drawImage(imgennemi, ennemix, ennemiy, null); 
 		
-		g.drawString("Diamant" + CompteurDiamant.getNombreDiamant(), 600, 10);
+		g.drawString("Diamant", 600, 10); 
+		
 		repaint();
 	}
 	
