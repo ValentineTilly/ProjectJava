@@ -51,7 +51,7 @@ public class ControllerFacade implements IController {
     public void start() {
     	
     	
-    	Fenetre fenetre = new Fenetre("BoulderDash");
+    	Fenetre fenetre = new Fenetre("BoulderDash", this.model);
     
     	//scene = new Scene();
 		//fenetre.setContentPane(scene);
