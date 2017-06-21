@@ -13,6 +13,7 @@ public class Map {
 		rechercherBdd(); 
 	}
 	
+	 public int plop; 
 	
 	private static ArrayList<Objets> ellement = new ArrayList<Objets>();
 	 public  static int map2[] [] = new int[16][16];
