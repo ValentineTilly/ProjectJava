@@ -68,7 +68,7 @@ public class Demojbc {
 	
 	public static void LireEnBase() {
 
-		String url = "jdbc:mysql://localhost/formation";
+		String url = "jdbc:mysql://localhost/boulderdash";
 		String login = "root";
 		String passwd = "";
 		Connection cn = null;
@@ -82,7 +82,7 @@ public class Demojbc {
 
 			st = cn.createStatement();
 
-			String sql = "SELECT * FROM  map1";
+			String sql = "SELECT * FROM  map";
 
 			rs = st.executeQuery(sql);
 			ResultSetMetaData resultMeta = rs.getMetaData();

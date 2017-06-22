@@ -2,6 +2,7 @@ package view;
 
 import java.awt.Graphics;
 import java.awt.Image;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 import javax.swing.ImageIcon;
@@ -11,6 +12,7 @@ import model.IModel;
 import model.Map;
 import model.Objets;
 import model.Personage;
+import model.dao.CompteurDiamant;
 
 
 public class Scene  extends JPanel{
@@ -111,7 +113,14 @@ public class Scene  extends JPanel{
 		}
 		
 		
+		try {
+			g.drawString("Diamants " + CompteurDiamant.getNbrDiamants(), 600, 20);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 		
+		g.drawString("Time : " + (60 - Fenetre.seconde), 600, 40); 
+
 		
 		repaint();
 	}

@@ -21,7 +21,7 @@ public class Fenetre extends JFrame  {
 	
 	KeyEven keyEven = new KeyEven(); 
 	
-
+	public static int seconde; 
 	
 	
 	public static int fenWidth = 700; 
@@ -47,9 +47,46 @@ public class Fenetre extends JFrame  {
         
         this.panneau = new Scene(this.model);
     	this.setContentPane(panneau);
+    	this.setVisible(true);
+    	this.timer(); 
+
+    	
 	}
 	
 	
+	
+	
+	
+	public void timer() {
+		   while (this.getSeconde() < 60) {
+				   try { 
+					Thread.sleep(1000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} 
+			   this.setSeconde(this.getSeconde() + 1); 
+			  System.out.println(this.getSeconde());
+	
+		   }
+				this.dispose(); 
+	}
+
+
+
+
+	public int getSeconde() {
+		return seconde;
+	}
+
+
+	public void setSeconde(int seconde) {
+		Fenetre.seconde = seconde;
+	}
+	
+	
+
+
 	
 }
 	

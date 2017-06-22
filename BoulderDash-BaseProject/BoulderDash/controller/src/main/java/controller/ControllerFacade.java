@@ -51,13 +51,14 @@ public class ControllerFacade implements IController {
     public void start() {
     	
     	
-    	Fenetre fenetre = new Fenetre("BoulderDash");
+    	Fenetre fenetre = new Fenetre("BoulderDash", model);
     
     	//scene = new Scene();
 		//fenetre.setContentPane(scene);
 	
-		fenetre.setVisible(true);
 
+		//fenetre.setVisible(true);
+		//fenetre.timer(); 
         
     }
 
