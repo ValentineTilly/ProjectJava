@@ -9,7 +9,7 @@ import javax.swing.JPanel;
 
 import model.IModel;
 import model.Map;
-import model.Objets;
+
 import model.Personage;
 
 
@@ -22,9 +22,10 @@ public class Scene  extends JPanel{
 	private ImageIcon persi; 
 	
 	private Image  imgpersi;
-
-	public Personage personage;
 	
+	public static String  direction ="ARRET"; 
+
+
 	
 	IModel model;
 	
@@ -45,7 +46,7 @@ public class Scene  extends JPanel{
 	
 		this.model = model;
 		 
-	personage = new Personage(persox, persoy);
+	
 		
 		
 	}
@@ -104,10 +105,43 @@ public class Scene  extends JPanel{
 				 j=3 ;
 					g.drawImage(imgpersi, j2*16,k*16, j2*16+16, k*16+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
 				}
-				j= 5;
-				g.drawImage(personage.getImgMario(), persox,persoy, persox+16, persoy+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
-		
+				
+				j = 5;
+				
 			}
+				if ( direction == "ARRET")
+				{
+				j= 5;
+				
+			
+				g.drawImage(imgpersi, persox,persoy, persox+16, persoy+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
+				}
+				else if (direction =="UP")
+				{
+					j =6 ;
+					i = 3;
+					g.drawImage(imgpersi, persox,persoy, persox+16, persoy+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
+				}
+				
+				else if (direction =="DOWN")
+				{
+					j =6 ;
+					i= 1;
+					g.drawImage(imgpersi, persox,persoy, persox+16, persoy+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
+				}
+				else if (direction =="LEFT")
+				{
+					j =5 ; 
+					i =2;
+					g.drawImage(imgpersi, persox,persoy, persox+16, persoy+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
+				}
+				else if (direction =="RIGHT")
+				{
+					j =5; 
+					i= 3;
+					g.drawImage(imgpersi, persox,persoy, persox+16, persoy+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
+				}
+			
 		}
 		
 		

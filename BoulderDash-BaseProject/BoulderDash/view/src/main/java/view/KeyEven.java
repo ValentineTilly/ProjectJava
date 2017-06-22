@@ -10,19 +10,24 @@ public class KeyEven implements KeyListener{
 		// TODO Auto-generated method stub
 		if (e.getKeyCode() == KeyEvent.VK_RIGHT && Scene.getPersox() < Fenetre.fenWidth - 16) {
 			Scene.setPersox (Scene.getPersox() +16);
+			Scene.direction = "RIGHT";
 		}
-
 		if (e.getKeyCode() == KeyEvent.VK_DOWN && Scene.getPersoy() < Fenetre.fenHeight - 16) {
 			Scene.setPersoy(Scene.getPersoy() +16); 
+			Scene.direction = "DOWN";
 		}
 		
 		if (e.getKeyCode() == KeyEvent.VK_LEFT && Scene.getPersox() > 0) {
 			Scene.setPersox(Scene.getPersox()-16); 
+			Scene.direction = "LEFT";
 		} 
 		
 		if (e.getKeyCode() == KeyEvent.VK_UP && Scene.getPersoy() > 0) {
 			Scene.setPersoy(Scene.getPersoy() -16);
+			Scene.direction = "UP";
 		}
+		
+		
 		
 
 	}

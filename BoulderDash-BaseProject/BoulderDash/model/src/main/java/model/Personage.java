@@ -36,6 +36,19 @@ public class Personage extends Object {
 	}
 	
 	
+	/*public  Image marche (String nom, int frequence)
+	{
+		String str; 
+		ImageIcon ico;
+		Image img ;
+		
+		if ( this.marche == false ||Scene.getPersox() <= 0)
+		{
+			
+		}
+	}*/
+	
+	
 	public Image getImgMario() 
 	{ return imgperso;
 	
