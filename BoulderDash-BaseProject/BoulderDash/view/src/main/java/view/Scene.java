@@ -10,6 +10,7 @@ import javax.swing.JPanel;
 import model.IModel;
 import model.Map;
 import model.Objets;
+import model.Personage;
 
 
 public class Scene  extends JPanel{
@@ -18,15 +19,16 @@ public class Scene  extends JPanel{
 	 * 
 	 */
 	private static final long serialVersionUID = -4866890461340317485L;
-	private ImageIcon perso; 
+	private ImageIcon persi; 
 	
-	private Image  imgperso;
+	private Image  imgpersi;
 
+	public Personage personage;
+	
+	
 	IModel model;
 	
-	private ImageIcon  pierre;
 	
-	private Image imgpierre;
 	
 	private static int  persox = 224; 
 	private static int persoy = 224; 
@@ -38,12 +40,12 @@ public class Scene  extends JPanel{
 
 	public Scene(IModel model) {
 		super();
-		perso = new ImageIcon(getClass().getResource("/name/image.png"));
-		this.imgperso = this.perso.getImage();
+		persi = new ImageIcon(getClass().getResource("/name/image.png"));
+		this.imgpersi = this.persi.getImage();
 	
 		this.model = model;
 		 
-	
+	personage = new Personage(persox, persoy);
 		
 		
 	}
@@ -72,38 +74,38 @@ public class Scene  extends JPanel{
 				if (Map.map2[j2][k] == 0) {
 					 i =0;
 					
-					g.drawImage(imgperso, j2*16,k*16, j2*16+16, k*16+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
+					g.drawImage(imgpersi, j2*16,k*16, j2*16+16, k*16+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
 				}
 				
 				else if (Map.map2[j2][k] == 1)
 				{ i= 1;
 				j = 0 ;
-					g.drawImage(imgperso, j2*16,k*16, j2*16+16, k*16+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
+					g.drawImage(imgpersi, j2*16,k*16, j2*16+16, k*16+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
 				}
 				
 				else if (Map.map2[j2][k] == 2)
 				{ 
 					
 				 i=3 ;
-					g.drawImage(imgperso, j2*16,k*16, j2*16+16, k*16+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
+					g.drawImage(imgpersi, j2*16,k*16, j2*16+16, k*16+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
 				}
 				else if (Map.map2[j2][k] == 3)
 				{ 
 				 i=4 ;
-					g.drawImage(imgperso, j2*16,k*16, j2*16+16, k*16+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
+					g.drawImage(imgpersi, j2*16,k*16, j2*16+16, k*16+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
 				}
 				else if (Map.map2[j2][k] == 4)
 				{ 
 				 j=1 ;
-					g.drawImage(imgperso, j2*16,k*16, j2*16+16, k*16+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
+					g.drawImage(imgpersi, j2*16,k*16, j2*16+16, k*16+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
 				}
 				else if (Map.map2[j2][k] == 5)
 				{ 
 				 j=3 ;
-					g.drawImage(imgperso, j2*16,k*16, j2*16+16, k*16+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
+					g.drawImage(imgpersi, j2*16,k*16, j2*16+16, k*16+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
 				}
 				j= 5;
-				g.drawImage(imgperso, persox,persoy, persox+16, persoy+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
+				g.drawImage(personage.getImgMario(), persox,persoy, persox+16, persoy+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
 		
 			}
 		}
