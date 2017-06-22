@@ -31,11 +31,6 @@ public class Scene  extends JPanel{
 	IModel model;
 	
 	
-	
-	private static int  persox = 224; 
-	private static int persoy = 224; 
-	
-
 	private int mapx;
 	private int mapy; 
 	
@@ -47,7 +42,7 @@ public class Scene  extends JPanel{
 	
 		this.model = model;
 		 
-	personage = new Personage(persox, persoy);
+	personage = new Personage();
 		
 		
 	}
@@ -107,7 +102,7 @@ public class Scene  extends JPanel{
 					g.drawImage(imgpersi, j2*16,k*16, j2*16+16, k*16+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
 				}
 				j= 5;
-				g.drawImage(personage.getImgMario(), persox,persoy, persox+16, persoy+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
+				g.drawImage(personage.getImgMario(), Personage.getPersox(),Personage.getPersoy(), Personage.getPersox()+16, Personage.getPersoy()+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
 		
 			}
 		}
@@ -142,24 +137,6 @@ public class Scene  extends JPanel{
 	
 	
 
-	public static int getPersox() {
-		return persox;
-	}
-
-
-	public static void setPersox(int persox) {
-		Scene.persox = persox;
-	}
-	
-
-	public static int getPersoy() {
-		return persoy;
-	}
-
-
-	public static void setPersoy(int persoy) {
-		Scene.persoy = persoy;
-	}
 
 	
 }

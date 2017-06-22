@@ -64,7 +64,7 @@ public class Map {
 				
 				}
 			
-			 else if ( lo == 4)
+			 else if ( lo == 5)
 				{
 					ellement.add(new Monstre (lx, ly, lo ));
 					

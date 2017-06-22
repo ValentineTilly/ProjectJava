@@ -6,7 +6,9 @@ import javax.swing.ImageIcon;
 
 public class Personage extends Object {
 	private int largeur, hauteur; 
-	private int x, y ; 
+	private static int persox = 224; 
+	private static int persoy = 224; 
+	
 	private boolean marche;
 	private boolean versDroite;
 	private boolean versGauche; 
@@ -17,10 +19,8 @@ public class Personage extends Object {
 	
 	public Image  imgperso;
 	
-	public Personage(int x, int y) 
+	public Personage() 
 	{
-		this.x= x; 
-		this.y = y; 
 		this.compteur = 0 ; 
 		this.marche = false;
 		this.versDroite = false;
@@ -62,24 +62,6 @@ public class Personage extends Object {
 	}
 
 
-	private int getX() {
-		return x;
-	}
-
-
-	private void setX(int x) {
-		this.x = x;
-	}
-
-
-	private int getY() {
-		return y;
-	}
-
-
-	private void setY(int y) {
-		this.y = y;
-	}
 
 
 	private boolean isMarche() {
@@ -121,6 +103,24 @@ public class Personage extends Object {
 		this.compteur = compteur;
 	}
 	
-	
+	public static int getPersox() {
+		return persox;
+	}
+
+
+	public static void setPersox(int persox) {
+		Personage.persox = persox;
+	}
+
+
+	public static int getPersoy() {
+		return persoy;
+	}
+
+
+	public static void setPersoy(int persoy) {
+		Personage.persoy = persoy;
+	}
+
 
 }
