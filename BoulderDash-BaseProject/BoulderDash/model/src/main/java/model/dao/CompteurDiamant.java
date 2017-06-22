@@ -18,8 +18,8 @@ public class CompteurDiamant extends AbstractDAO {
             final ResultSet result = callStatement.getResultSet();
             if (result.first()) {
                 for ( boolean isResultLeft = result.first() ; isResultLeft ; isResultLeft = result.next()) {
-                	for (int i = 0; i < 5; i++) {
-						if (result.getInt(i+1) == 2) {
+                	for (int i = 0; i < 30; i++) {
+						if (result.getInt(i+1) == 3) {
 							nombreDiamant++;
 						}
 					}

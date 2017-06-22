@@ -6,7 +6,7 @@ import model.dao.Demojbc;
 
 public class Map {
 	
-	
+
 	
 	 Map () 
 	{
@@ -101,8 +101,7 @@ public class Map {
 	 */
 
 
-
-
+	
 
 	
 }
