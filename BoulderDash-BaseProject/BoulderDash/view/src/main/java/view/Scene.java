@@ -85,13 +85,14 @@ public class Scene extends JPanel {
                 	j=3;
                     g.drawImage(imgpersi, n.lx*16,n.ly*16, n.lx*16+16, n.ly*16+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
                     break;
+                   
                     
-                  g.drawImage(  )
             }
             
-            //,kjhjjgc
-            
+               
 		}
+        
+		g.drawImage(personage.marche(),personage.getPersox(), personage.getPersoy(), null); 
 
 		repaint();
 					

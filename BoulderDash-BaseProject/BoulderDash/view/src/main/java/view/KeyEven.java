@@ -3,6 +3,7 @@ package view;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+import model.Mur;
 import model.Personage;
 
 public class KeyEven implements KeyListener{	
@@ -13,7 +14,6 @@ public class KeyEven implements KeyListener{
 		if (e.getKeyCode() == KeyEvent.VK_RIGHT && Personage.getPersox() < Fenetre.fenWidth - 16) {
 			Personage.setPersox (Personage.getPersox() +16);
 			Personage.setDirection("RIGHT") ;
-			
 		}
 
 		if (e.getKeyCode() == KeyEvent.VK_DOWN && Personage.getPersoy() < Fenetre.fenHeight - 16) {
@@ -52,6 +52,19 @@ public class KeyEven implements KeyListener{
 		// TODO Auto-generated method stub
 		
 	}
+	
+	/*
+	public void CollisionDroite() {
+		if (Personage.getPersox()/ 16 + 1 == Mur.murx) {
+			Personage.setPersox(Personage.getPersox()); 
+		}
+		if (Personage.getPersox()/ 16 + 1 == Mur.murx) {
+			Personage.setPersox(Personage.getPersox()); 
+		}
+		else {
+		
+	}*/
+	
 	
 		
 }
