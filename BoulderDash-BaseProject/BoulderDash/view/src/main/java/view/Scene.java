@@ -86,10 +86,10 @@ public class Scene extends JPanel {
                     g.drawImage(imgpersi, n.lx*16,n.ly*16, n.lx*16+16, n.ly*16+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
                     break;
                     
-                   //  g.drawImage()
+                  g.drawImage(  )
             }
             
-            
+            //,kjhjjgc
             
 		}
 

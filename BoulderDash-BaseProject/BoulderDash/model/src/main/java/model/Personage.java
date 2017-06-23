@@ -13,7 +13,7 @@ public class Personage extends Object {
 	private boolean versDroite;
 	private boolean versGauche; 
 	public int compteur; 
-	
+	private int valentinelade;
 	
 	public static String direction = "UP";
 	private ImageIcon perso; 
