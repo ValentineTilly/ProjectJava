@@ -59,6 +59,8 @@ public class Scene extends JPanel {
 		for (Objets n : Map.ellement) {
             switch (n.lo) {
                 case 0:
+                	j= 0; 
+                	i = 0; 
                     g.drawImage(imgpersi, n.lx*16,n.ly*16, n.lx*16+16, n.ly*16+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
                     break;
                 case 1:
@@ -76,14 +78,21 @@ public class Scene extends JPanel {
                     g.drawImage(imgpersi, n.lx*16,n.ly*16, n.lx*16+16, n.ly*16+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
                     break;
                 case 4:
+                	j=1;
                     g.drawImage(imgpersi, n.lx*16,n.ly*16, n.lx*16+16, n.ly*16+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
                     break;
                 case 5:
                 	j=3;
                     g.drawImage(imgpersi, n.lx*16,n.ly*16, n.lx*16+16, n.ly*16+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
                     break;
+                    
+                   //  g.drawImage()
             }
+            
+            
+            
 		}
+
 		repaint();
 					
 		
@@ -130,7 +139,7 @@ public class Scene extends JPanel {
 				}
 				
 				
-				g.drawImage(personage.marche(), Personage.getPersox(),Personage.getPersoy(),null);
+				
 		
 			}
 }*/
