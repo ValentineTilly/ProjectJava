@@ -5,5 +5,6 @@ public class Sol extends Objets{
 	{
 		
 
+		super(x,y,lo);
 	}
 }

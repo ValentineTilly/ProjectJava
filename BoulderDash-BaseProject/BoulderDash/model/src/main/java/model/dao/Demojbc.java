@@ -68,7 +68,7 @@ public class Demojbc {
 	
 	public static void LireEnBase() {
 
-		String url = "jdbc:mysql://localhost/boulderdash";
+		String url = "jdbc:mysql://localhost/formation";
 		String login = "root";
 		String passwd = "";
 		Connection cn = null;

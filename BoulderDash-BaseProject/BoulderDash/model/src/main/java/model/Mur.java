@@ -9,5 +9,6 @@ public class Mur extends Objets {
 	{
 		
 
+		super(x,y,lo);
 	}
 }

@@ -2,8 +2,6 @@ package view;
 
 import java.awt.Graphics;
 import java.awt.Image;
-import java.sql.SQLException;
-import java.util.ArrayList;
 
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
@@ -12,42 +10,35 @@ import model.IModel;
 import model.Map;
 import model.Objets;
 import model.Personage;
-import model.dao.CompteurDiamant;
 
+public class Scene extends JPanel {
 
-public class Scene  extends JPanel{
-	
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = -4866890461340317485L;
-	private ImageIcon persi; 
-	
-	private Image  imgpersi;
+	private ImageIcon persi;
+
+	private Image imgpersi;
 
 	public Personage personage;
-	
-	
+
 	IModel model;
-	
-	
+
 	private int mapx;
-	private int mapy; 
-	
+	private int mapy;
 
 	public Scene(IModel model) {
 		super();
 		persi = new ImageIcon(getClass().getResource("/name/image.png"));
 		this.imgpersi = this.persi.getImage();
-	
+
 		this.model = model;
-		 
-	personage = new Personage();
-		
-		
+
+		personage = new Personage();
+
 	}
-	
-		
+
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		g.clearRect(0, 0, getWidth(), getHeight());
@@ -64,7 +55,35 @@ public class Scene  extends JPanel{
 		int i =0;
 		int j = 0;
 		
-		for (int j2 = 0; j2 < 31; j2++) {
+		
+		for (Objets n : Map.ellement) {
+            switch (n.lo) {
+                case 0:
+                    g.drawImage(imgpersi, n.lx*16,n.ly*16, n.lx*16+16, n.ly*16+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
+                    break;
+                case 2:
+                	 		i= 1;
+                	 		j = 0 ;
+                    g.drawImage(imgpersi, n.lx*16,n.ly*16, n.lx*16+16, n.ly*16+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
+                    break;
+                case 3:
+
+   				 			i=3;
+                    g.drawImage(imgpersi, n.lx*16,n.ly*16, n.lx*16+16, n.ly*16+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
+                    break;
+                case 4:
+                			i=4 ;
+                    g.drawImage(imgpersi, n.lx*16,n.ly*16, n.lx*16+16, n.ly*16+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
+                    break;
+                case 5:
+                    g.drawImage(imgpersi, n.lx*16,n.ly*16, n.lx*16+16, n.ly*16+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
+                    break;
+            }
+		}
+		repaint();
+					
+		
+		/*for (int j2 = 0; j2 < 31; j2++) {
 			for (int k = 0; k < 31; k++)
 			{
 				j= 0 ;
@@ -100,46 +119,39 @@ public class Scene  extends JPanel{
 				{ 
 				 j=3 ;
 					g.drawImage(imgpersi, j2*16,k*16, j2*16+16, k*16+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
+					{
+					
+					}
+					
 				}
-				j= 5;
-				g.drawImage(personage.getImgMario(), Personage.getPersox(),Personage.getPersoy(), Personage.getPersox()+16, Personage.getPersoy()+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
+				
+				
+				g.drawImage(personage.marche(), Personage.getPersox(),Personage.getPersoy(),null);
 		
 			}
-		}
+}*/
 		
 		
-		try {
+		/*try {
 			g.drawString("Diamants " + CompteurDiamant.getNbrDiamants(), 600, 20);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 		
-		g.drawString("Time : " + (60 - Fenetre.seconde), 600, 40); 
+		g.drawString("Time : " + (60 - Fenetre.seconde), 600, 40); */
 
 		
-		repaint();
-	}
+		
+		
 		
 		//Demojbc.ellement
 		
 		
-		
-	
-	
-	
-	
-	/*
-	bool Collision (AABB box1, AABB box2) {
-		
-	}*/
-	
-	
-	
-	
-
-
-	
+	}
 }
-	
 
-
+/*
+ * bool Collision (AABB box1, AABB box2) {
+ * 
+ * }
+ */

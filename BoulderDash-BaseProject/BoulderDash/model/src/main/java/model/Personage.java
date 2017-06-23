@@ -9,12 +9,13 @@ public class Personage extends Object {
 	private static int persox = 224; 
 	private static int persoy = 224; 
 	
-	private boolean marche;
+	private static boolean marche;
 	private boolean versDroite;
 	private boolean versGauche; 
 	public int compteur; 
 	
 	
+	public static String direction = "UP";
 	private ImageIcon perso; 
 	
 	public Image  imgperso;
@@ -28,18 +29,74 @@ public class Personage extends Object {
 		
 		
 		
-		perso = new ImageIcon(getClass().getResource("/name/image.png"));
+		
+		
+		
+		
+		
+			/*perso = new ImageIcon(getClass().getResource("/name/dd1.png"));
+	this.imgperso = this.perso.getImage();*/
+	
+		
+	
+		
+		
+	}
+	
+
+	
+	
+	
+	
+	
+	
+	
+	@SuppressWarnings({ "unused", "unused" })
+	public   Image marche() {
+		
+	
+	
+	
+	 if  ( direction =="RIGHT")
+	{
+		perso = new ImageIcon(getClass().getResource("/name/dd1.png"));
 		this.imgperso = this.perso.getImage();
-		
-		
-		
+	}
+	
+	else if  ( direction =="LEFT")
+	{
+		perso = new ImageIcon(getClass().getResource("/name/dg1.png"));
+		this.imgperso = this.perso.getImage();
+	}
+	 
+	else if ( direction =="UP")
+	{
+		perso = new ImageIcon(getClass().getResource("/name/dhd.png"));
+		this.imgperso = this.perso.getImage();
+	}
+	else if ( direction =="DOWN")
+	{
+		perso = new ImageIcon(getClass().getResource("/name/dbg.png"));
+		this.imgperso = this.perso.getImage();
+	}
+	 
+	 
+	else if ( direction == "NULL")
+	{
+
+		perso = new ImageIcon(getClass().getResource("/name/pi.png"));
+this.imgperso = this.perso.getImage();
+
+	}
+	return imgperso;
+	
 	}
 	
 	
-	public Image getImgMario() 
-	{ return imgperso;
 	
-	}
+		
+	
+	
 
 
 	private int getLargeur() {
@@ -69,8 +126,8 @@ public class Personage extends Object {
 	}
 
 
-	private void setMarche(boolean marche) {
-		this.marche = marche;
+	public  void setMarche(boolean marche) {
+		marche = marche;
 	}
 
 
@@ -79,8 +136,8 @@ public class Personage extends Object {
 	}
 
 
-	private void setVersDroite(boolean versDroite) {
-		this.versDroite = versDroite;
+	public  void setVersDroite(boolean versDroite) {
+		versDroite = versDroite;
 	}
 
 
@@ -89,7 +146,7 @@ public class Personage extends Object {
 	}
 
 
-	private void setVersGauche(boolean versGauche) {
+	public  void setVersGauche(boolean versGauche) {
 		this.versGauche = versGauche;
 	}
 
@@ -120,6 +177,30 @@ public class Personage extends Object {
 
 	public static void setPersoy(int persoy) {
 		Personage.persoy = persoy;
+	}
+
+
+
+
+
+
+
+
+
+	private String getDirection() {
+		return direction;
+	}
+
+
+
+
+
+
+
+
+
+	public static void setDirection(String direction) {
+		Personage.direction = direction;
 	}
 
 

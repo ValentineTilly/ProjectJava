@@ -4,7 +4,6 @@ import controller.ControllerFacade;
 import controller.IController;
 import model.IModel;
 import model.ModelFacade;
-import model.dao.Demojbc;
 import view.IView;
 import view.ViewFacade;
 

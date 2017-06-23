@@ -7,9 +7,9 @@ import java.awt.Image;
 public abstract class Objets {
 
 	
-protected float xo ; 
-
-protected float yo ; 
+public int lx;
+public int ly ;
+public int lo ;
 
 
 protected boolean  pull;
@@ -21,15 +21,19 @@ protected boolean fall;
 	
 	
 	
-public Objets()
+public Objets(int lx, int ly, int lo)
 
 {
-	
+	this.lx =lx; 
+	this.ly=ly;
+	this.lo=lo; 
 	
 	
 	
 	
 }
+
+
 
 
 
@@ -39,22 +43,8 @@ public Objets()
  * @see model.IObjet#getXo()
  */
 
-public float getXo() {
-	return xo;
-}
 
 
-
-
-
-
-/* (non-Javadoc)
- * @see model.IObjet#setXo(float)
- */
-
-public void setXo(float xo) {
-	this.xo = xo;
-}
 
 
 
@@ -64,23 +54,6 @@ public void setXo(float xo) {
 /* (non-Javadoc)
  * @see model.IObjet#getYo()
  */
-
-public float getYo() {
-	return yo;
-}
-
-
-
-
-
-
-/* (non-Javadoc)
- * @see model.IObjet#setYo(float)
- */
-
-public void setYo(float yo) {
-	this.yo = yo;
-}
 
 
 

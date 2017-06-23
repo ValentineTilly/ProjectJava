@@ -7,5 +7,6 @@ public class Tp extends Objets {
 	{
 		
 
+		super(x,y,lo);
 	}
 }

@@ -19,9 +19,8 @@ public Cailloux(int x, int y, int lo )
 {
 	
 
-	icoPierre = new ImageIcon(getClass().getResource("/image/pierre.jpg"));
-	this.imgPierre = this.icoPierre.getImage();
-	
+
+	super(x,y,lo);
 	
 	
 	

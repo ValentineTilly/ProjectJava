@@ -14,7 +14,7 @@ public class Map {
 	}
 	
 	
-	private static ArrayList<Objets> ellement = new ArrayList<Objets>();
+	public static ArrayList<Objets> ellement = new ArrayList<Objets>();
 	 public  static int map2[] [] = new int[35][35];
 	 
 	 /* (non-Javadoc)
@@ -94,6 +94,65 @@ public class Map {
 		 Demojbc.LireEnBase();
 	}
 
+
+
+
+
+
+
+
+
+
+
+
+
+	public static int[][] getMap2() {
+		return map2;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	public static void setMap2(int[][] map2) {
+		Map.map2 = map2;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
 
 
 	/* (non-Javadoc)
