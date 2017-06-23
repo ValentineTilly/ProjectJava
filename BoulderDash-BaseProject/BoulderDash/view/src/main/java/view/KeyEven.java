@@ -19,6 +19,7 @@ public class KeyEven implements KeyListener{
 		if (e.getKeyCode() == KeyEvent.VK_DOWN && Personage.getPersoy() < Fenetre.fenHeight - 16) {
 			Personage.setPersoy(Personage.getPersoy() +16);
 			Personage.setDirection("DOWN") ;
+			
 		}
 		
 		if (e.getKeyCode() == KeyEvent.VK_LEFT && Personage.getPersox() > 0) {

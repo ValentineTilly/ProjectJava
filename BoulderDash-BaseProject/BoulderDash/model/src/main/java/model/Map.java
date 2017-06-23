@@ -70,6 +70,11 @@ public class Map {
 					
 				
 				}
+			
+			 else if ( lo ==6)
+			 {
+				 ellement.add(new Vide(lx, ly,lo)); 
+			 }
 			return ellement;
 			
 	}

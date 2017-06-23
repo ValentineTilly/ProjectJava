@@ -67,6 +67,7 @@ public class Scene extends JPanel {
                 	 		i= 1;
                 	 		j = 0 ;
                     g.drawImage(imgpersi, n.lx*16,n.ly*16, n.lx*16+16, n.ly*16+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
+                    
                     break;
                 case 2:
 
@@ -86,13 +87,18 @@ public class Scene extends JPanel {
                     g.drawImage(imgpersi, n.lx*16,n.ly*16, n.lx*16+16, n.ly*16+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
                     break;
                     
-                  g.drawImage(  )
+                case 6:
+                	i=2;
+                	
+                    g.drawImage(imgpersi, n.lx*16,n.ly*16, n.lx*16+16, n.ly*16+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
+                    break;
             }
+            personage.contact();
             
             //,kjhjjgc
             
 		}
-
+g.drawImage(personage.marche(),personage.getPersox(),personage.getPersoy(),null  );
 		repaint();
 					
 		

@@ -82,7 +82,7 @@ public class Demojbc {
 
 			st = cn.createStatement();
 
-			String sql = "SELECT * FROM  map3";
+			String sql = "SELECT * FROM  map1";
 
 			rs = st.executeQuery(sql);
 			ResultSetMetaData resultMeta = rs.getMetaData();

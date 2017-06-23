@@ -94,7 +94,24 @@ this.imgperso = this.perso.getImage();
 	
 	
 	
-		
+	
+	
+	public void contact()
+	{
+
+	for (Objets n : Map.ellement) 
+      if (n.lx == persox/16 && n.ly == persoy/16 && n.lo == 1 )
+      {
+    	 n.lo = 6 ;
+              
+        }
+      else if  ( n.lx == persox/16 && n.ly ==persoy/16 && n.lo==3)
+	{
+		n.lo=6;
+	}
+	
+	
+	}
 	
 	
 
