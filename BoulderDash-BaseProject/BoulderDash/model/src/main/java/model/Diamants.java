@@ -8,28 +8,32 @@ import javax.swing.ImageIcon;
 public class Diamants extends Objets {
 
 	
-	int lx; 
-	int ly; 
-	int lo; 
+	public static int lx; 
+	public static int ly; 
+	public static int lo; 
 	
 	
-	
-	public Diamants(int lx, int ly, int lo ) 
-	{
-		this.lx = lx; 
-		this.ly = ly; 
-		this.lo = lo; 
+	public Diamants(int lx, int ly, int lo ) {
+		
+		Diamants.lx = lx; 
+		Diamants.ly = ly; 
+		Diamants.lo = lo; 
 
 	}
 	
-	public void RecolteDiamant () {
-		if (Personage.getPersox() == lx 
-				&& Personage.getPersoy() == ly)
-			lo = 1; 
-			
-					
-	}
-	
+	/*
+	public static int RecolteDiamant(int lo) {
+		 if( lo == 3 
+				&& Personage.getPersox()/16 == lx + 1
+				&& Personage.getPersoy()/16 == ly+ 1) {
+			 	Map.map2 [lx][ly] = 1; 
+			  }
+		 return lo = 1; 
+		 else {
+			 return Diamants.lo = lo;  
+		 }
+	}*/
+
 		
 	}
 	

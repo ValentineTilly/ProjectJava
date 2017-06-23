@@ -3,6 +3,8 @@ package view;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+import model.Diamants;
+import model.Map;
 import model.Personage;
 
 public class KeyEven implements KeyListener{	
@@ -10,7 +12,8 @@ public class KeyEven implements KeyListener{
 	
 	public void keyPressed(KeyEvent e) {
 		// TODO Auto-generated method stub
-		if (e.getKeyCode() == KeyEvent.VK_RIGHT && Personage.getPersox() < Fenetre.fenWidth - 16) {
+		if (e.getKeyCode() == KeyEvent.VK_RIGHT && Personage.getPersox() < Fenetre.fenWidth - 16
+				&& CollisionDroite()) {
 			Personage.setPersox (Personage.getPersox() +16);
 		}
 
@@ -39,6 +42,21 @@ public class KeyEven implements KeyListener{
 	public void keyTyped(KeyEvent e) {
 		// TODO Auto-generated method stub
 		
+	}
+	
+	
+	
+	
+	
+	public boolean CollisionDroite (){
+		if (Map.map2 [Diamants.lx + 1] [Diamants.ly] == 0)
+		{
+			return false; 
+		}
+		
+		else {
+			return true; 
+		}
 	}
 	
 		

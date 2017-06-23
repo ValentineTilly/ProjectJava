@@ -11,6 +11,7 @@ public class Map {
 	 Map () 
 	{
 		rechercherBdd(); 
+		
 	}
 	
 	
@@ -28,17 +29,32 @@ public class Map {
 			System.out.print(lx+ " ");
 			System.out.println(ly+" " );
 			
+			/*
+			if (lo == 3 
+					&& Personage.getPersox()/16 == lx + 1
+					&& Personage.getPersoy()/16 == ly+ 1) {
+				lo = 1;
+			}
+			*/
+						
+			//Diamants.RecolteDiamant(3); 
+			
 			map2 [lx] [ly] = lo;
 			
-			if ( lo == 0 )
+				
+			//Diamants.RecolteDiamant(3); 
+			
+
+			
+			if (lo == 0 )
 			{
-				
-				
+					
 				ellement.add(new Mur(lx, ly, lo));
 				
 			}
 			
 			 else if ( lo == 1)
+
 			{
 				ellement.add(new Sol (lx, ly, lo ));
 				
@@ -55,7 +71,7 @@ public class Map {
 				{
 					ellement.add(new Diamants (lx, ly, lo ));
 					
-				
+					
 				}
 			 else if ( lo == 4)
 				{
@@ -75,10 +91,8 @@ public class Map {
 	}
 		
 
-			
-	
-	
-	
+
+
 
 	
 	
@@ -92,6 +106,16 @@ public class Map {
 	public void rechercherBdd ()
 	{
 		 Demojbc.LireEnBase();
+	}
+
+
+	public static int[][] getMap2() {
+		return map2;
+	}
+
+
+	public static void setMap2(int[][] map2) {
+		Map.map2 = map2;
 	}
 
 
