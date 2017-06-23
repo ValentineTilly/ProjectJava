@@ -61,21 +61,25 @@ public class Scene extends JPanel {
                 case 0:
                     g.drawImage(imgpersi, n.lx*16,n.ly*16, n.lx*16+16, n.ly*16+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
                     break;
-                case 2:
+                case 1:
                 	 		i= 1;
                 	 		j = 0 ;
                     g.drawImage(imgpersi, n.lx*16,n.ly*16, n.lx*16+16, n.ly*16+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
                     break;
-                case 3:
+                case 2:
 
    				 			i=3;
                     g.drawImage(imgpersi, n.lx*16,n.ly*16, n.lx*16+16, n.ly*16+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
                     break;
-                case 4:
+                case 3:
                 			i=4 ;
                     g.drawImage(imgpersi, n.lx*16,n.ly*16, n.lx*16+16, n.ly*16+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
                     break;
+                case 4:
+                    g.drawImage(imgpersi, n.lx*16,n.ly*16, n.lx*16+16, n.ly*16+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
+                    break;
                 case 5:
+                	j=3;
                     g.drawImage(imgpersi, n.lx*16,n.ly*16, n.lx*16+16, n.ly*16+16, i*16, j*16, (i+1)*16, (j+1)*16, null);
                     break;
             }

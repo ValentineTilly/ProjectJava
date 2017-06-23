@@ -44,7 +44,7 @@ public class Personage extends Object {
 	}
 	
 
-	
+	 // public void
 	
 	
 	
